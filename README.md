@@ -130,3 +130,4 @@ Edit `src/constants.js` to add, remove, or rename line items in any of the three
 - **EmailJS** — send emails directly from the browser (no backend)
 - **Calendly API** — client lookup by address
 - **Vercel** — free hosting with automatic deploys on every git push
+
