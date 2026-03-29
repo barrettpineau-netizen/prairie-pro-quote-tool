@@ -44,17 +44,17 @@ export const REPAIR_TYPES = [
   { value: 'telepost', label: 'Tele Post Pad Replacement' },
 ]
 
-// ── API config (fill in after setup) ─────────────────────────────────────────
+// ── API config ────────────────────────────────────────────────────────────────
 export const CONFIG = {
   // Calendly
   CALENDLY_API_TOKEN: 'eyJraWQiOiIxY2UxZTEzNjE3ZGNmNzY2YjNjZWJjY2Y4ZGM1YmFmYThhNjVlNjg0MDIzZjdjMzJiZTgzNDliMjM4MDEzNWI0IiwidHlwIjoiUEFUIiwiYWxnIjoiRVMyNTYifQ.eyJpc3MiOiJodHRwczovL2F1dGguY2FsZW5kbHkuY29tIiwiaWF0IjoxNzc0ODA5NzI4LCJqdGkiOiI3MmE1YmZiZi0xMDI0LTQzNTgtYmRhYS1mYTY1YjJkZTY0YWIiLCJ1c2VyX3V1aWQiOiJmYjhiMmZlZC03NzIwLTQ0NjItOTY5Yi0wY2UxMzM1NjVkYTEiLCJzY29wZSI6ImF2YWlsYWJpbGl0eTpyZWFkIGF2YWlsYWJpbGl0eTp3cml0ZSBldmVudF90eXBlczpyZWFkIGV2ZW50X3R5cGVzOndyaXRlIGxvY2F0aW9uczpyZWFkIHJvdXRpbmdfZm9ybXM6cmVhZCBzaGFyZXM6d3JpdGUgc2NoZWR1bGVkX2V2ZW50czpyZWFkIHNjaGVkdWxlZF9ldmVudHM6d3JpdGUgc2NoZWR1bGluZ19saW5rczp3cml0ZSBncm91cHM6cmVhZCBvcmdhbml6YXRpb25zOnJlYWQgb3JnYW5pemF0aW9uczp3cml0ZSB1c2VyczpyZWFkIGFjdGl2aXR5X2xvZzpyZWFkIGRhdGFfY29tcGxpYW5jZTp3cml0ZSBvdXRnb2luZ19jb21tdW5pY2F0aW9uczpyZWFkIHdlYmhvb2tzOnJlYWQgd2ViaG9va3M6d3JpdGUifQ.2cvJd6u1YPUOjV4hsuo4L8lEvQ-gBpV7pcT3AV60ayjXKlgYNAYvqWBv1t_-nTMU3FASzBPPNBP76YchaZpclg',
   CALENDLY_USER_URI: 'https://api.calendly.com/users/fb8b2fed-7720-4462-969b-0ce133565da1',
 
-  // EmailJS
-  EMAILJS_SERVICE_ID: import.meta.env.VITE_EMAILJS_SERVICE_ID || '',
-  EMAILJS_TEMPLATE_ID: import.meta.env.VITE_EMAILJS_TEMPLATE_ID || '',
-  EMAILJS_PUBLIC_KEY: import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '',
- 
+  // EmailJS (add after setup)
+  EMAILJS_SERVICE_ID: '',
+  EMAILJS_TEMPLATE_ID: '',
+  EMAILJS_PUBLIC_KEY: '',
+
   // Company
   COMPANY_NAME: 'Prairie Pro Foundation Repair Inc.',
   COMPANY_ADDRESS: '11 Ruttan Bay, Winnipeg, MB',
@@ -63,6 +63,3 @@ export const CONFIG = {
   COMPANY_WEB: 'www.prairieprofoundations.ca',
   SENDER_EMAIL: 'barrett@prairieprofoundations.ca',
 }
-// v2
-  
-
