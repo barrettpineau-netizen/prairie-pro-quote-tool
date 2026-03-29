@@ -1,0 +1,102 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy: #1A3A6B;
+  --navy-dark: #112850;
+  --navy-light: #2a4f8f;
+  --gold: #C9A227;
+  --gold-light: #e0b93a;
+  --white: #ffffff;
+  --off: #F9FAFB;
+  --border: #E5E7EB;
+  --text: #111827;
+  --muted: #6B7280;
+  --success: #16a34a;
+  --error: #dc2626;
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body: 'Barlow', sans-serif;
+}
+
+html { font-size: 16px; }
+
+body {
+  font-family: var(--font-body);
+  background: #f0f2f5;
+  color: var(--text);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+
+/* Inputs */
+input, select, textarea {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border: 1.5px solid var(--border);
+  border-radius: 6px;
+  background: var(--white);
+  color: var(--text);
+  transition: border-color 0.15s, box-shadow 0.15s;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--navy);
+  box-shadow: 0 0 0 3px rgba(26,58,107,0.1);
+}
+
+input::placeholder, textarea::placeholder { color: #9ca3af; }
+
+/* Buttons */
+button {
+  font-family: var(--font-display);
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  transition: all 0.15s;
+}
+
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.btn-primary {
+  background: var(--navy);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.btn-primary:hover:not(:disabled) { background: var(--navy-light); }
+
+.btn-gold {
+  background: var(--gold);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.btn-gold:hover:not(:disabled) { background: var(--gold-light); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--navy);
+  border: 1.5px solid var(--navy);
+  padding: 0.65rem 1.25rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+.btn-ghost:hover:not(:disabled) { background: var(--navy); color: white; }
+
+.btn-sm {
+  padding: 0.45rem 0.9rem;
+  font-size: 0.82rem;
+}
