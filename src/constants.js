@@ -54,7 +54,7 @@ export const CONFIG = {
   EMAILJS_SERVICE_ID: import.meta.env.VITE_EMAILJS_SERVICE_ID || '',
   EMAILJS_TEMPLATE_ID: import.meta.env.VITE_EMAILJS_TEMPLATE_ID || '',
   EMAILJS_PUBLIC_KEY: import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '',
-
+ 
   // Company
   COMPANY_NAME: 'Prairie Pro Foundation Repair Inc.',
   COMPANY_ADDRESS: '11 Ruttan Bay, Winnipeg, MB',
@@ -63,3 +63,4 @@ export const CONFIG = {
   COMPANY_WEB: 'www.prairieprofoundations.ca',
   SENDER_EMAIL: 'barrett@prairieprofoundations.ca',
 }
+// v2
