@@ -63,3 +63,4 @@ export const CONFIG = {
   COMPANY_WEB: 'www.prairieprofoundations.ca',
   SENDER_EMAIL: 'barrett@prairieprofoundations.ca',
 }
+export const BUILD = 2
