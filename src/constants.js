@@ -51,9 +51,9 @@ export const CONFIG = {
   CALENDLY_USER_URI: 'https://api.calendly.com/users/fb8b2fed-7720-4462-969b-0ce133565da1',
 
   // EmailJS (add after setup)
-  EMAILJS_SERVICE_ID: '',
-  EMAILJS_TEMPLATE_ID: '',
-  EMAILJS_PUBLIC_KEY: '',
+EMAILJS_SERVICE_ID: 'service_u20d8hw',
+EMAILJS_TEMPLATE_ID: 'template_lewjlh5',
+EMAILJS_PUBLIC_KEY: 'VZ_w3RzeomFuCYm2T',
 
   // Company
   COMPANY_NAME: 'Prairie Pro Foundation Repair Inc.',
