@@ -4,15 +4,15 @@ const SERVICE_ID = 'service_u20d8hw'
 const TEMPLATE_ID = 'template_lewjlh5'
 const PUBLIC_KEY = 'VZ_w3RzeomFuCYm2T'
 
+// ⚠️ TEST MODE — remove this line and use quoteData.clientEmail when going live
+const TEST_EMAIL = 'barrettpineau@gmail.com'
+
 emailjs.init(PUBLIC_KEY)
 
-/**
- * Send the quote PDF to the client via EmailJS.
- */
 export async function sendQuoteEmail({ pdfBase64, quoteData }) {
   const templateParams = {
     to_name: quoteData.clientName,
-    to_email: quoteData.clientEmail,
+    to_email: TEST_EMAIL, // swap to quoteData.clientEmail when live
     from_name: 'Prairie Pro Foundation Repair',
     quote_number: quoteData.quoteNumber,
     address: quoteData.address,
