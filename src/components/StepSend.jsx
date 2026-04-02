@@ -12,9 +12,10 @@ export default function StepSend({ data, quoteNumber, onBack, onReset }) {
     setErrorMsg('')
     try {
       const element = document.getElementById('quote-pdf-root')
+      const addr = data.client && data.client.address ? data.client.address : 'Quote'
       const opt = {
         margin: 0,
-        filename: \`\${quoteNumber} - \${data.client?.address || 'Quote'}.pdf\`,
+        filename: quoteNumber + ' - ' + addr + '.pdf',
         image: { type: 'jpeg', quality: 0.98 },
         html2canvas: { scale: 2, useCORS: true, logging: false },
         jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
@@ -34,25 +35,21 @@ export default function StepSend({ data, quoteNumber, onBack, onReset }) {
         <span className={s.stepNum}>04</span>
         <h2 className={s.stepTitle}>Preview & Download</h2>
       </div>
-
       <div className={s.sendActions}>
-        <button className="btn-ghost" onClick={onBack} disabled={isBusy}>← Edit</button>
-        <button className="btn-primary" onClick={handleDownload} disabled={isBusy}>
+        <button className='btn-ghost' onClick={onBack} disabled={isBusy}>← Edit</button>
+        <button className='btn-primary' onClick={handleDownload} disabled={isBusy}>
           {status === 'generating' ? '⏳ Generating...' : '⬇ Download PDF'}
         </button>
       </div>
-
       {status === 'error' && (
-        <div className={\`\${s.statusMsg} \${s.statusError}\`} style={{ marginBottom: 12 }}>
+        <div className={s.statusMsg + ' ' + s.statusError} style={{ marginBottom: 12 }}>
           ⚠ {errorMsg}
         </div>
       )}
-
       <div className={s.quoteNumBadge}>
         <span>Quote Number</span>
         <strong>{quoteNumber}</strong>
       </div>
-
       <div className={s.pdfPreviewWrap}>
         <div className={s.pdfPreviewInner}>
           <QuotePDF
@@ -68,9 +65,8 @@ export default function StepSend({ data, quoteNumber, onBack, onReset }) {
           />
         </div>
       </div>
-
       <div className={s.actions} style={{ marginTop: 16 }}>
-        <button className="btn-ghost" onClick={onReset}>+ Start New Quote</button>
+        <button className='btn-ghost' onClick={onReset}>+ Start New Quote</button>
       </div>
     </div>
   )
