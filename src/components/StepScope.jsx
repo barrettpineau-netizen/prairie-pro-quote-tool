@@ -29,10 +29,10 @@ export default function StepScope({ data, onChange, onNext, onBack }) {
               onClick={() => handleTypeSelect(rt.value)}
             >
               <span className={s.typeTileIcon}>
-                {rt.value === 'exterior' && '⛏'}
-                {rt.value === 'interior' && '🔧'}
-                {rt.value === 'both' && '⚡'}
-                {rt.value === 'telepost' && '🏗'}
+                {rt.value === 'exterior' && 'â'}
+                {rt.value === 'interior' && 'ð§'}
+                {rt.value === 'both' && 'â¡'}
+                {rt.value === 'telepost' && 'ð'}
               </span>
               {rt.label}
             </button>
@@ -44,11 +44,11 @@ export default function StepScope({ data, onChange, onNext, onBack }) {
       {(data.repairType === 'exterior' || data.repairType === 'both') && (
         <div className={s.scopeSection}>
           <div className={s.scopeSectionTitle}>
-            {data.repairType === 'both' ? 'Option B — Exterior Details' : 'Exterior Details'}
+            {data.repairType === 'both' ? 'Option B â Exterior Details' : 'Exterior Details'}
           </div>
           <div className={s.row2}>
             <div className={s.fieldGroup}>
-              <label className={s.label}>Exterior Dig — Feet</label>
+              <label className={s.label}>Exterior Dig â Feet</label>
               <input
                 type="number"
                 value={data.extDigFt || ''}
@@ -80,11 +80,11 @@ export default function StepScope({ data, onChange, onNext, onBack }) {
       {(data.repairType === 'interior' || data.repairType === 'both') && (
         <div className={s.scopeSection}>
           <div className={s.scopeSectionTitle}>
-            {data.repairType === 'both' ? 'Option A — Interior Details' : 'Interior Details'}
+            {data.repairType === 'both' ? 'Option A â Interior Details' : 'Interior Details'}
           </div>
           <div className={s.row2}>
             <div className={s.fieldGroup}>
-              <label className={s.label}>Wall Length — Feet</label>
+              <label className={s.label}>Wall Length â Feet</label>
               <input
                 type="number"
                 value={data.intWallFt || ''}
@@ -108,7 +108,7 @@ export default function StepScope({ data, onChange, onNext, onBack }) {
           </div>
           <div className={s.row2}>
             <div className={s.fieldGroup}>
-              <label className={s.label}>Weeping Tile — Feet</label>
+              <label className={s.label}>Weeping Tile â Feet</label>
               <input
                 type="number"
                 value={data.weepingTileFt || ''}
@@ -135,8 +135,8 @@ export default function StepScope({ data, onChange, onNext, onBack }) {
               onChange={(e) => set('drywallCovered')(e.target.value)}
             >
               <option value="">Select...</option>
-              <option value="yes">Yes — drywall / insulation present</option>
-              <option value="no">No — wall is exposed</option>
+              <option value="yes">Yes â drywall / insulation present</option>
+              <option value="no">No â wall is exposed</option>
             </select>
           </div>
           <div className={s.fieldGroup}>
@@ -157,7 +157,7 @@ export default function StepScope({ data, onChange, onNext, onBack }) {
           <div className={s.scopeSectionTitle}>Grading</div>
           <div className={s.row3}>
             <div className={s.fieldGroup}>
-              <label className={s.label}>Basic Grading — ft</label>
+              <label className={s.label}>Basic Grading â ft</label>
               <input
                 type="number"
                 value={data.gradingFt || ''}
@@ -166,7 +166,7 @@ export default function StepScope({ data, onChange, onNext, onBack }) {
               />
             </div>
             <div className={s.fieldGroup}>
-              <label className={s.label}>Paved Concrete — ft</label>
+              <label className={s.label}>Paved Concrete â ft</label>
               <input
                 type="number"
                 value={data.concreteFt || ''}
@@ -175,7 +175,7 @@ export default function StepScope({ data, onChange, onNext, onBack }) {
               />
             </div>
             <div className={s.fieldGroup}>
-              <label className={s.label}>Grass Seeding — ft</label>
+              <label className={s.label}>Grass Seeding â ft</label>
               <input
                 type="number"
                 value={data.grassFt || ''}
@@ -188,9 +188,9 @@ export default function StepScope({ data, onChange, onNext, onBack }) {
       )}
 
       <div className={s.actions}>
-        <button className="btn-ghost" onClick={onBack}>← Back</button>
+        <button className="btn-ghost" onClick={onBack}>â Back</button>
         <button className="btn-primary" onClick={onNext} disabled={!valid}>
-          Next: Line Items & Pricing →
+          Next: Line Items & Pricing â
         </button>
       </div>
     </div>
