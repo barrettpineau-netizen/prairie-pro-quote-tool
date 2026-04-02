@@ -1,12 +1,12 @@
-// ââ Quote numbering ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ── Quote numbering ──────────────────────────────────────────────────────────
 export const getNextQuoteNumber = () => {
   const stored = localStorage.getItem('pp_quote_counter')
   const next = stored ? parseInt(stored) + 1 : 134
   localStorage.setItem('pp_quote_counter', String(next))
-  return `Quote-${String(next).padStart(4, '0')}`
+  return 'Quote-' + String(next).padStart(4, '0')
 }
 
-// ââ Line item definitions âââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ── Line item definitions ─────────────────────────────────────────────────────
 export const INTERIOR_ITEMS = [
   { id: 'int_1', label: 'Clear 5 ft from wall. Document w/ photos before start', defaultQty: 1 },
   { id: 'int_2', label: 'Remove drywall, vapour barrier, insulation, studs, etc. as applicable', defaultQty: 1 },
@@ -31,9 +31,10 @@ export const EXTERIOR_ITEMS = [
 export const REPAIR_TYPES = [
   { value: 'exterior', label: 'Exterior Repair' },
   { value: 'interior', label: 'Interior Repair' },
-  { value: 'both', label: 'Both (Interior + Exterior Options)' },]
+  { value: 'both', label: 'Both (Interior + Exterior Options)' },
+]
 
-// ââ API config ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// ── API config ────────────────────────────────────────────────────────────────
 export const CALENDLY_API_TOKEN = 'eyJraWQiOiIxY2UxZTEzNjE3ZGNmNzY2YjNjZWJjY2Y4ZGM1YmFmYThhNjVlNjg0MDIzZjdjMzJiZTgzNDliMjM4MDEzNWI0IiwidHlwIjoiUEFUIiwiYWxnIjoiRVMyNTYifQ.eyJpc3MiOiJodHRwczovL2F1dGguY2FsZW5kbHkuY29tIiwiaWF0IjoxNzc0ODA5NzI4LCJqdGkiOiI3MmE1YmZiZi0xMDI0LTQzNTgtYmRhYS1mYTY1YjJkZTY0YWIiLCJ1c2VyX3V1aWQiOiJmYjhiMmZlZC03NzIwLTQ0NjItOTY5Yi0wY2UxMzM1NjVkYTEiLCJzY29wZSI6ImF2YWlsYWJpbGl0eTpyZWFkIGF2YWlsYWJpbGl0eTp3cml0ZSBldmVudF90eXBlczpyZWFkIGV2ZW50X3R5cGVzOndyaXRlIGxvY2F0aW9uczpyZWFkIHJvdXRpbmdfZm9ybXM6cmVhZCBzaGFyZXM6d3JpdGUgc2NoZWR1bGVkX2V2ZW50czpyZWFkIHNjaGVkdWxlZF9ldmVudHM6d3JpdGUgc2NoZWR1bGluZ19saW5rczp3cml0ZSBncm91cHM6cmVhZCBvcmdhbml6YXRpb25zOnJlYWQgb3JnYW5pemF0aW9uczp3cml0ZSB1c2VyczpyZWFkIGFjdGl2aXR5X2xvZzpyZWFkIGRhdGFfY29tcGxpYW5jZTp3cml0ZSBvdXRnb2luZ19jb21tdW5pY2F0aW9uczpyZWFkIHdlYmhvb2tzOnJlYWQgd2ViaG9va3M6d3JpdGUifQ.2cvJd6u1YPUOjV4hsuo4L8lEvQ-gBpV7pcT3AV60ayjXKlgYNAYvqWBv1t_-nTMU3FASzBPPNBP76YchaZpclg'
 export const CALENDLY_USER_URI = 'https://api.calendly.com/users/fb8b2fed-7720-4462-969b-0ce133565da1'
 export const EMAILJS_SERVICE_ID = 'service_u20d8hw'
